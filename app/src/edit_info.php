@@ -39,23 +39,16 @@
                 exit;
             }
             
-            $sql = "INSERT INTO tbcorretores (nome, creci, cpf) VALUES ('$nome', '$creci', '$cpf')";
-            if (mysqli_query($conn, $sql)) {
-                echo "<div class='alert alert-success'>Cadastro realizado com sucesso!</div>";
-            } else {
-                echo "<div class='alert alert-danger'>Erro ao cadastrar: " . mysqli_error($conn) . "</div>";
-            }
-
             $sql = "UPDATE `tbcorretores` set `nome` = '$nome', `cpf` = '$cpf', `creci` = '$creci'
             WHERE id = $id";
-
-
             if (mysqli_query($conn, $sql)) {
                 mensagem("$nome alterado com sucesso", 'success');
             } else {
                 mensagem("$nome não foi alterado", 'danger');
             }
-        
+
+            $sql = "UPDATE `tbcorretores` set `nome` = '$nome', `cpf` = '$cpf', `creci` = '$creci'
+            WHERE id = $id";
 
         ?>
         <hr>

@@ -40,19 +40,12 @@
             
             $sql = "INSERT INTO tbcorretores (nome, creci, cpf) VALUES ('$nome', '$creci', '$cpf')";
             if (mysqli_query($conn, $sql)) {
-                echo "<div class='alert alert-success'>Cadastro realizado com sucesso!</div>";
-            } else {
-                echo "<div class='alert alert-danger'>Erro ao cadastrar: " . mysqli_error($conn) . "</div>";
-            }
-
-            $sql = "INSERT INTO `tbcorretores`(`nome`, `cpf`, `creci`) VALUES ('$nome','$cpf','$creci')";
-
-
-            if (mysqli_query($conn, $sql)) {
                 mensagem("$nome cadastrado com sucesso", 'success');
             } else {
                 mensagem("$nome não foi cadastrado", 'danger');
             }
+
+            $sql = "INSERT INTO `tbcorretores`(`nome`, `cpf`, `creci`) VALUES ('$nome','$cpf','$creci')";
         
 
         ?>
