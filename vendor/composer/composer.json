@@ -1,0 +1,14 @@
+{
+    "name": "isabe/teste_backend_imovel_guide",
+    "autoload": {
+        "psr-4": {
+            "Isabe\\TesteBackendImovelGuide\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "isabellaalves"
+        }
+    ],
+    "require": {}
+}
